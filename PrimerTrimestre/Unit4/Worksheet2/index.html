@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+#tocar{
+    width:400px;
+    height:200px;
+    background:#f00;
+    }
+</style>
+
+</head>
+<body>
+    <div id="tocable"></div>
+    <div id="coordenadas"></div>
+    <script type = "text/javascript">
+    function puntos(event) {
+        var coordenadas = document.getElementById("coordenadas");
+        for (i = 0; i < event.touches.length; i++) {
+            coordenadas.innerHTML = i + "=> X: " + event.touches[i].pageX + "Y: " + event.touches[i].pageY;
+        }
+    }
+
+    function init() {
+        var tocar = document.getElementById("tocable");
+        tocar.addEventListener("touchstart", puntos);
+    }
+    init();
+    </script>
+</body>
+</html>

@@ -245,7 +245,7 @@ var cambiarTitle = (new_title) => {
 cambiarTitle("Pepe Sonrisas aka Rau");
 */
 //r7
-
+/*
 function distance(lat1, lon1, lat2, lon2) {
   var p = 0.017453292519943295;    // Math.PI / 180
   var c = Math.cos;
@@ -272,3 +272,4 @@ function calcDistancia(){
 miLocalizacion();
 //setInterval(miLocalizacion,1000);
 //37.1923203 //-3.6174631999999995
+*/

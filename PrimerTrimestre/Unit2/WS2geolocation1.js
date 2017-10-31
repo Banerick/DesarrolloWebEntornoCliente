@@ -9,7 +9,8 @@ console.log("Posicion = lat: " + (curPos.latitude+i)
 });
 }
 */
-
+// Mejorar el programa para que se actualice conforme te mueves y ademas calcule la distancia.
+/*
 function obtDistance(lat1, lon1, lat2, lon2) {
   var p = 0.017453292519943295;    // Math.PI / 180
   var c = Math.cos;
@@ -24,7 +25,6 @@ var distance = 0;
 function initMap() {
   navigator.geolocation.getCurrentPosition(function (position){
     lastPos = position.coords
-
     navigator.geolocation.watchPosition(function(position) {
       distance += obtDistance(lastPos.latitude,lastPos.longitude,
         position.coords.latitude,position.coords.longitude);
@@ -34,3 +34,5 @@ function initMap() {
     });
   };
 initMap();
+*/
+//

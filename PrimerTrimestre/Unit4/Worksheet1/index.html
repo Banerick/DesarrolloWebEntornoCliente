@@ -1,0 +1,52 @@
+<!--
+<html>
+<body>
+<div id="test"></div>
+
+<script>
+  document.addEventListener("click", function( event ) {
+    // display the current click count inside the clicked div
+    alert('holajose');
+  }, false);
+</script>
+</body>
+</html>
+-->
+<!--
+<html>
+<body>
+<script>
+  document.addEventListener("mousemove", function( event ) {
+    // display the current click count inside the clicked div
+    console.log(event.screenX + ' ' + event.screenY);
+  }, false);
+</script>
+</body>
+</html>
+-->
+
+<html>
+<style>
+       body {
+           position: relative;
+       }
+       #tabla {
+       }
+       #tabla td {
+           height: 1px;
+           width: 1px;
+       }
+       .pintado {
+           background-color: red;
+       }
+       img.arrastrable {
+           position: absolute;
+       }
+   </style>
+<body>
+  <script type="text/javascript" src="code.js"> </script>
+  <table id="tabla"></table>
+  <button id="cleantable">Limpiar tabla</button>
+  <img src="anonymous.png" class="arrastrable">
+</body>
+</html>
