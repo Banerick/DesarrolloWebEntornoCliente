@@ -18,7 +18,7 @@ class Pong {
         this.marcador2.setAttributeNS(null,'x','420');
         this.marcador2.setAttributeNS(null,'y','50');
         this.marcador2.setAttributeNS(null,'fill','blue');
-        this.marcador2.setAttributeNS(null,'font-size','40')
+        this.marcador2.setAttributeNS(null,'font-size','40');
         this.svg.appendChild(this.marcador2);
     }
 }
