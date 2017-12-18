@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="application/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawBarChart);
+
+        function drawBarChart() {
+
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Zurdos');
+            data.addRows([
+                ['2011', 1452],
+                ['2012', 2360],
+                ['2013', 4021],
+                ['2014', 1300]
+            ]);
+            var options = {
+                'title': 'Evolucion de la poblacion zurda en Badajoz',
+                'width': 600,
+                'height': 500
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.BarChart(document.getElementById('barchar'));
+            chart.draw(data, options);
+        };
+    </script>
+</head>
+<body>
+<div id="barchar"></div>
+</body>
+</html>

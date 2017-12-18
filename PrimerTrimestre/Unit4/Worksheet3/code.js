@@ -23,18 +23,18 @@ function obtenerCasilla(){
             evaluar(event.target,event.target.value.test(arr[2]))
           break;
           case 'tlf':
-            evaluar(event.target,event.target.value.test(arr[3]))
-          break;
-          case 'email':
-            evaluar(event.target,event.target.value.test(arr[4]))
-          break;
-          case 'usuario':
-            evaluar(event.target,event.target.value.test(arr[5]))
-          break;
-          }
-      }
-    }
+evaluar(event.target,event.target.value.test(arr[3]))
+break;
+case 'email':
+evaluar(event.target,event.target.value.test(arr[4]))
+break;
+case 'usuario':
+evaluar(event.target,event.target.value.test(arr[5]))
+break;
+}
+}
+}
 }
 function evaluar(casilla,resultado){
-  (resultado ? no hagas nada : haz algo)
+    (resultado ? no hagas nada : haz algo)
 }

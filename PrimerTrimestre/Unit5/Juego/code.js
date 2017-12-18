@@ -74,7 +74,7 @@ class Bola {
     choqueBloq2() {
         let ballTop = this.y + this.radio;
         let ballBottom = this.y + this.radio;
-        if (ballTop > this.pong.jugador2.y && ballBottom < (this.pong.jugador2.y + 150) && (this.x + this.radio) > 760) {
+        if (ballTop > this.pong.jugador2.y && ballBottom < (this.pong.jugador2.y + 150) && (this.x + this.radio) > 770) {
             this.choqueX = true;
             //this.choqueY = ballBottom >= (this.pong.jugador2.y + 50);
         }
@@ -92,11 +92,11 @@ class Bola {
         this.choqueBloq2();
         this.choquebordes();
         this.x = this.choqueX
-            ? this.x - 2
-            : this.x + 2;
+            ? this.x - 10
+            : this.x + 10;
         this.y = this.choqueY
-            ? this.y - 2
-            : this.y + 2;
+            ? this.y - 10
+            : this.y + 10;
         this.bola.setAttributeNS(null, 'cx', this.x);
         this.bola.setAttributeNS(null, 'cy', this.y);
     }

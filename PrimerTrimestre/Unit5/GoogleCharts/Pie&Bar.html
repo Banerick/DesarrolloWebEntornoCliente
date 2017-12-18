@@ -1,0 +1,82 @@
+<html>
+<head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Set a callback to run when the Google Visualization API is loaded.
+        google.charts.setOnLoadCallback(drawBarChart);
+        google.charts.setOnLoadCallback(drawPieChart);
+
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+        function drawBarChart() {
+
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Escanos');
+            data.addRows([
+                ['JxSi', 0],
+                ['Cs', 0],
+                ['PSC', 0],
+                ['CatSiqueesPot', 0],
+                ['PP', 0],
+                ['CUP', 0]
+            ]);
+            setInterval(
+                function () {
+                    var newVal = Array(62, 35, 16, 11, 11, 10);
+                    for (let i = 0; i > newVal.length; i++)
+                        data.setValue(0, i, newVal[i]);
+                    ;
+                }, 3000);
+
+            // Set chart options
+            var options = {
+                'title': 'Ultimas elecciones catalanas',
+                'width': 700,
+                'height': 300
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.BarChart(document.getElementById('barchart_div'));
+            chart.draw(data, options);
+        };
+        function drawPieChart() {
+
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Escanos');
+            data.addRows([
+                ['JxSi', 62],
+                ['Cs', 25],
+                ['PSC', 16],
+                ['CatSiqueesPot', 11],
+                ['PP', 11],
+                ['CUP', 10]
+            ]);
+
+            // Set chart options
+            var options = {'title':'Ultimas elecciones catalanas',
+                'width':700,
+                'height':300};
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+<!--Div that will hold the pie chart-->
+<div id="barchart_div"></div>
+<div id="piechart_div"></div>
+</body>
+</html>

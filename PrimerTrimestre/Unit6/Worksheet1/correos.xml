@@ -1,0 +1,14 @@
+<correos>
+    <cuenta>
+        <nombre>raul@gm.com</nombre>
+        <contraseña>blablabla</contraseña>
+    </cuenta>
+    <cuenta>
+        <nombre>paco@gm.com</nombre>
+        <contraseña>blablabla</contraseña>
+    </cuenta>
+    <cuenta>
+        <nombre>pepe@gm.com</nombre>
+        <contraseña>blobloblo</contraseña>
+    </cuenta>
+</correos>
