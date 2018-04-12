@@ -1,5 +1,5 @@
 var working = true;
-var pagina = 2;
+var page = 2;
 function search() {
     $('#loading').hide();
     $("#content").empty();
@@ -26,7 +26,7 @@ function showFilms(result) {
             '                    <div class="card-body">\n' +
             '                        <h5 class="card-title">' + result.Search[n].Title + '</h5>\n' +
             '                        <p class="card-text">' + result.Search[n].Year + '</p>\n' +
-            '                        <button type="button" class="btn btn-primary" onclick="detallar(\''+result.Search[n].imdbID +'\')">Primary</button>\n' +
+            '                        <button type="button" class="btn btn-primary" onclick="detallar(\''+result.Search[n].imdbID +'\')">Details</button>\n' +
             '                    </div>\n' +
             '                </div>\n' +
             '            </div>')
@@ -48,11 +48,11 @@ function detallar(idDetalle){
                     '            <img src="'+ result.Poster +'">\n' +
                     '        </div>\n' +
                     '        <div class="col-6">\n' +
-                    '            <div class="content-fluid">Titulo: ' + result.Title + '</div>\n' +
-                    '            <div class="content-fluid">Duracion: ' + result.Runtime + '</div>\n' +
-                    '            <div class="content-fluid">Genero: ' + result.Genre + '</div>\n' +
-                    '            <div class="content-fluid">Actores: ' + result.Actors + '</div>\n' +
-                    '            <div class="content-fluid">Trama: ' + result.Plot + '</div>\n' +
+                    '            <div class="content-fluid"><b>Title: </b> ' + result.Title + '</div>\n' +
+                    '            <div class="content-fluid"><b>Runtime:  </b> ' + result.Runtime + '</div>\n' +
+                    '            <div class="content-fluid"><b>Genre: </b> ' + result.Genre + '</div>\n' +
+                    '            <div class="content-fluid"><b>Actors: </b>' + result.Actors + '</div>\n' +
+                    '            <div class="content-fluid"><b>Plot: </b>' + result.Plot + '</div>\n' +
                     '    </div>')
             }
         }
@@ -64,7 +64,7 @@ $(window).scroll(function() {
         $('#loading').show();
         working = false;
         $.ajax({
-            url: 'http://www.omdbapi.com/?s=' + $("#searchVar").val() + '&page=' + pagina + '&type=movie&apikey=e257c65c',
+            url: 'http://www.omdbapi.com/?s=' + $("#searchVar").val() + '&page=' + page + '&type=movie&apikey=e257c65c',
             success: function(result) {
                 if (result.Response === 'True') {
                     pagina ++;
